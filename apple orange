@@ -1,0 +1,17 @@
+
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    closeapples, closeoranges = 0, 0
+    for d in apples:
+        if a+d>=s and a+d<=t:
+            closeapples+=1
+    for d in oranges:
+        if b+d<=t and b+d>=s:
+            closeoranges+=1
+    print(closeapples)
+    print(closeoranges)
+s,t = map(int, input().split())
+a,b = map(int, input().split())
+m,n = map(int, input().split())
+apples = list(map(int, input().split()))
+oranges = list(map(int, input().split()))
+countApplesAndOranges(s, t, a, b, apples, oranges)
