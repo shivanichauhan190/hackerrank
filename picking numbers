@@ -1,0 +1,13 @@
+import sys
+
+
+n = int(raw_input().strip())
+a = map(int,raw_input().strip().split(' '))
+
+a.sort()
+ans = 0
+for i in xrange(n):
+    for j in xrange(n):
+        if abs(a[j] - a[i]) <= 1:
+            ans = max(ans, j - i + 1)
+print ans
